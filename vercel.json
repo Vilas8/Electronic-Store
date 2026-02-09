@@ -1,19 +1,8 @@
 {
   "buildCommand": "pnpm build",
   "outputDirectory": "dist",
-  "cleanUrls": true,
-  "trailingSlash": false,
+  "public": "dist",
   "env": {
     "NODE_ENV": "production"
-  },
-  "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "/index.js"
-    },
-    {
-      "source": "/:path*",
-      "destination": "/index.html"
-    }
-  ]
+  }
 }
