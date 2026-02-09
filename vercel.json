@@ -8,18 +8,10 @@
     {
       "source": "/api/:path*",
       "destination": "/dist/index.js"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/dist/public/$1",
-      "status": 200
     },
     {
-      "src": "/api/(.*)",
-      "dest": "/dist/index.js",
-      "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"]
+      "source": "/(.*)",
+      "destination": "/dist/public/$1"
     }
   ]
 }
