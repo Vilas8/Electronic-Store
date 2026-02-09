@@ -1,8 +1,18 @@
 {
   "buildCommand": "pnpm build",
   "outputDirectory": "dist",
-  "public": "dist",
   "env": {
     "NODE_ENV": "production"
-  }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    }
+  ]
 }
